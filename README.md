@@ -1,6 +1,6 @@
 # Bash Commands and Scripts
 
-### Commands related to navigating the filesystem
+## Commands related to navigating the filesystem
 
 - `touch filename.txt` will create file
 - `pwd` - print working directory - or - "where am I?"
@@ -22,7 +22,7 @@
 - `man <command>` - gives us the manual page and options for any Unix command (q will get out of manual page)
 - [Notes about command-line navigation](https://github.com/IntroToCompBioLSU-Spr20/Shell_Week2/blob/master/CommandLine_Navigating.md)
 
-### Commands related to files and folders
+## Commands related to files and folders
 
 - `cp` - copies a file
     - `cp originalFile.txt newFile.txt`
@@ -82,7 +82,7 @@ Practice Exercise
 
 - [Notes about editing files and folders from the command line](https://github.com/IntroToCompBioLSU-Spr20/Shell_Week2/blob/master/CommandLine_Editing.md)
 
-### Commands related to the Unix environment
+## Commands related to the Unix environment
 
 - Can create a variable and assign value using `=`
     - `myVariable=2`
@@ -91,6 +91,31 @@ Practice Exercise
 - `|` - the Unix pipe can be used to send the output of one command into the input of another
     - `history | tail -n 20 >> endOfHistory.txt`
 
+## Introduction to scripts
+
+- What is a script?
+  - Fundamentally, a bash script is just a file containing a series of bash commands.
+  - Scripts are formatted as text files. But the things in this file are special.
+  - The first line of a script file tells the computer in which language (i.e., shell) we're writing our script. This line starts with "#!" - also known as a shebang. The shebang tells Terminal that we're about to indicate which language we're going to use.
+  - Follow the shebang with the path to the shell that you'd like to use. Yes, the shell itself is a program!
+    - #! /bin/bash
+  - Let's start by creating your first script - myScript.sh
+    - nano myScript.sh
+    - Add the shebang line
+    - Add two commands in the body of the file
+      - echo "Hello, "$USER"!"
+      - echo "I'M A SCRIPT AND I WORK!"
+
+
+- Scripts contain series of commands
+  - This is essentially your first foray into programming.
+  - You'll need to think through the steps involved in whatever task you need to complete and then write a command for each step.
+  - This ability to break a big problem into individual steps is the most important skill in programming.
+  - As an example, let's write a program together to do a basic analysis of a dna sequence. This sequence is already available in the week 5 repository in `dnaSequence.txt`. This is a real sequence from the human genome (at least, some human genomes) and we'd like to count the number of As, Cs, Gs, and Ts that it contains.
+
+- Command-line Arguments
+    - To access the argument from inside the script, bash reserves the special variables $1, $2, $3, ...
+    - For practice, go back to `myScript.sh` that we created earlier and change `$USER` to `$1`. Now, run it by typing `myScript.sh <YOUR_NAME>`
 
 ```
 Assignment 3
