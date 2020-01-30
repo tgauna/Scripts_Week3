@@ -43,7 +43,7 @@
 - `wc` - print out the length of a file in lines, words, and characters
 
 ```
-Practice Exercise
+Practice Exercise 1
 
 (1) Create a file with the touch command.
 (2) Make a copy of the file using cp.
@@ -69,7 +69,7 @@ Practice Exercise
 - `grep` - find only lines matching some particular string
 
 ```
-Practice Exercise
+Practice Exercise 2
 
 (1) Create a series of new text files, with some filenams starting with one letter and some starting with another.
 (2) Use echo and output redirection (> or >>) to add content to the files.
@@ -82,6 +82,20 @@ Practice Exercise
 
 - [Notes about editing files and folders from the command line](https://github.com/IntroToCompBioLSU-Spr20/Shell_Week2/blob/master/CommandLine_Editing.md)
 
+## Parsing File Contents
+
+Another very powerful command is called `awk`, which can do lots of different forms of text parsing. For the purposes of this course, we will focus on using `awk` to extract individual columns (generally separated by spaces or tabs) from a file. The syntax we will use looks like this
+
+`awk '{print $1}' test.txt`
+
+This will print out the first column. To print the third column, we would use
+
+`awk '{print $3}' test.txt`
+
+To print both the first and third columns, we could do this
+
+`awk '{print $1,$3}' test.txt`
+
 ## Commands related to the Unix environment
 
 - Can create a variable and assign value using `=`
@@ -90,6 +104,42 @@ Practice Exercise
     - `echo $myVariable`
 - `|` - the Unix pipe can be used to send the output of one command into the input of another
     - `history | tail -n 20 >> endOfHistory.txt`
+- Can store the output of a command in a variable by first execute the command in backticks
+    ```
+    myVariable=`ls | head -n1`
+    ```
+- Note that bash is sensitive to spaces! Don't leave any spaces before or after your equals sign when assigning a value to a variable.
+
+```
+Practice Exercise 3
+
+(1) Create a new variable.
+(2) Assign a numeric value to this variable.
+(3) Print the value of the variable to the screen.
+(4) Print the value of the variable to a new file.
+(5) Assign a character or word value to your variable.
+(6) Print the value of the variable to the screen.
+(7) Append this new value of the variable to the file you created in step (4).
+(8) Assign the 4th file or folder name you see when you execute ls to your variable. Use backticks, ls, head, tail, and pipes!
+(9) Append the name of this file or folder to your new file.
+```
+
+```
+Practice Exercise 4
+
+(1) Use history, a pipe, tail, and >> to extract the last 50 lines from your command history and store them in a new file (recentCommands.txt).
+(2) Open your new file with less and scroll through to make sure the contents are correct.
+(3) Use cp to make another copy of this file (recentCommands2.txt).
+(4) Make a new folder called myCommands.
+(4) Use mv to relocate recentCommands2.txt to your new folder.
+(5) Change your working directory to this folder
+(6) Open recentCommands2.txt in nano and make some edits. Save your edits and quit nano.
+(7) Use cat to view the contents of your edited file and make sure it saved properly.
+(8) Use rm recentCommands2.txt to delete this new copy.
+```
+
+You can download a copy of [test.txt here](https://github.com/IntroPhylogenomics/ComputingFundamentals/blob/master/test.txt).
+
 
 ## Introduction to scripts
 
