@@ -90,8 +90,8 @@ Practice Exercise
     - `echo $myVariable`
 - `|` - the Unix pipe can be used to send the output of one command into the input of another
     - `history | tail -n 20 >> endOfHistory.txt`
-- Can store the output of a command in a variable by first execute the command in backticks - `\`\``
-    - `myVariable=\`ls | head -n1\``
+- Can store the output of a command in a variable by first execute the command in backticks - ````
+    - `myVariable=``ls | head -n1\```
 
 ## Introduction to scripts
 
