@@ -92,8 +92,23 @@ Practice Exercise
     - `history | tail -n 20 >> endOfHistory.txt`
 - Can store the output of a command in a variable by first execute the command in backticks
     ```
-    - myVariable=`ls | head -n1`
+    myVariable=`ls | head -n1`
     ```
+- Note that bash is sensitive to spaces! Don't leave any spaces before or after your equals sign when assigning a value to a variable.
+
+```
+Practice Exercise
+
+(1) Create a new variable.
+(2) Assign a numeric value to this variable.
+(3) Print the value of the variable to the screen.
+(4) Print the value of the variable to a new file.
+(5) Assign a character or word value to your variable.
+(6) Print the value of the variable to the screen.
+(7) Append this new value of the variable to the file you created in step (4).
+(8) Assign the 4th file or folder name you see when you execute ls to your variable. Use backticks, ls, head, tail, and pipes!
+(9) Append the name of this file or folder to your new file.
+```
 
 ## Introduction to scripts
 
