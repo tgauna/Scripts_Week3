@@ -127,15 +127,15 @@ Practice Exercise 3
 ```
 Practice Exercise 4
 
-(1) Use `history`, a pipe, `tail`, and `>>` to extract the last 50 lines from your command history and store them in a new file (`recentCommands.txt`).
-(2) Open your new file with `less` and scroll through to make sure the contents are correct.
-(3) Use `cp` to make another copy of this file (`recentCommands2.txt`).
-(4) Make a new folder called `myCommands`.
-(4) Use `mv` to relocate `recentCommands2.txt` to your new folder.
+(1) Use history, a pipe, tail, and >> to extract the last 50 lines from your command history and store them in a new file (recentCommands.txt).
+(2) Open your new file with less and scroll through to make sure the contents are correct.
+(3) Use cp to make another copy of this file (recentCommands2.txt).
+(4) Make a new folder called myCommands.
+(4) Use mv to relocate recentCommands2.txt to your new folder.
 (5) Change your working directory to this folder
-(6) Open `recentCommands2.txt` in `nano` and make some edits. Save your edits and quit `nano`.
-(7) Use `cat` to view the contents of your edited file and make sure it saved properly.
-(8) Use `rm recentCommands2.txt` to delete this new copy.
+(6) Open recentCommands2.txt in nano and make some edits. Save your edits and quit nano.
+(7) Use cat to view the contents of your edited file and make sure it saved properly.
+(8) Use rm recentCommands2.txt to delete this new copy.
 ```
 
 You can download a copy of [test.txt here](https://github.com/IntroPhylogenomics/ComputingFundamentals/blob/master/test.txt).
